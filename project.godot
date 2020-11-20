@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="astroids_io"
-config/icon="res://icon.png"
+config/icon="res://new folder/icon.png"
 
 [autoload]
 
