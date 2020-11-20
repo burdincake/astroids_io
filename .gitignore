@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 # Godot-specific ignores
 .import/
 
@@ -24,3 +25,5 @@ screenshots/
 
 
 
+=======
+>>>>>>> 6115d519cc6a15a2d1cb5edf01fb54846e063fda
