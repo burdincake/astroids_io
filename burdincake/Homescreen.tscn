@@ -49,7 +49,7 @@ position = Vector2( 173.748, 202.115 )
 position = Vector2( 65.473, -124.994 )
 
 [node name="Sprite" type="Sprite" parent="Node2D"]
-position = Vector2( 269.893, 224.562 )
+position = Vector2( 272.639, 225.383 )
 scale = Vector2( 3.41083, 3.35212 )
 texture = ExtResource( 4 )
 
@@ -62,9 +62,9 @@ script = ExtResource( 1 )
 starCount = 1000
 
 [node name="Button" type="Button" parent="."]
-margin_left = 236.366
+margin_left = 255.887
 margin_top = 142.411
-margin_right = 388.366
+margin_right = 366.887
 margin_bottom = 162.411
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -104,15 +104,32 @@ __meta__ = {
 
 [node name="TextEdit" type="TextEdit" parent="."]
 light_mask = -2147483648
-margin_left = 204.994
-margin_top = 95.106
-margin_right = 416.994
-margin_bottom = 120.106
+margin_left = 239.0
+margin_top = 96.0
+margin_right = 417.0
+margin_bottom = 120.0
 custom_styles/normal = SubResource( 7 )
 custom_colors/selection_color = Color( 0.486275, 0.486275, 0.486275, 1 )
 custom_colors/font_color = Color( 0.756863, 0.756863, 0.756863, 1 )
-text = "  Enter name here"
 override_selected_font_color = true
+caret_blink = true
+caret_blink_speed = 0.42
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="black" type="Sprite" parent="."]
+position = Vector2( 212.537, 107.821 )
+scale = Vector2( 0.144376, 0.0674292 )
+texture = ExtResource( 4 )
+
+[node name="name" type="Label" parent="."]
+margin_left = 190.515
+margin_top = 101.006
+margin_right = 234.515
+margin_bottom = 115.006
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "name: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
