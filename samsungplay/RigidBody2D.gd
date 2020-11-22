@@ -6,11 +6,12 @@ extends KinematicBody2D
 # var b = "text"
 
 var velocity = Vector2()
-export var accel_speed = 1000.0
+export var accel_speed = 75.0
 export var decel_speed = 0.45
 export var max_horizontal_velocity = 100.0
 export var max_vertical_velocity = 100.0
 var is_accel = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,12 +38,17 @@ func _physics_process(delta):
 		velocity.y = lerp(velocity.y,0,decel_speed*delta)	
 	if velocity.x > 0:
 		velocity.x = min(velocity.x,max_horizontal_velocity)
+	
 	else:
 		velocity.x = max(velocity.x,-max_horizontal_velocity)
+		
 	if velocity.y > 0:
 		velocity.y = min(velocity.y,max_vertical_velocity)
 	else:
 		velocity.y = max(velocity.y,-max_vertical_velocity)
+	rotate(velocity.x * 0.0005)
+	rotate(velocity.y * 0.0005)
+
 	
 	
 	
