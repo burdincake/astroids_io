@@ -14,17 +14,21 @@ export var angular_velocity = 0.0005
 var is_accel = false
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
 	pass # Replace with function body.
 
 func _physics_process(delta):
+	
 	is_accel = false
 	
 	if Input.is_action_pressed('ui_right'):
 		velocity.x += delta * accel_speed
 		is_accel = true
+		
+		
 	if Input.is_action_pressed('ui_left'):
 		velocity.x -= delta * accel_speed
 		is_accel = true
@@ -49,11 +53,14 @@ func _physics_process(delta):
 		velocity.y = max(velocity.y,-max_vertical_velocity)
 	rotate(velocity.x * angular_velocity)
 	rotate(velocity.y * angular_velocity)
+	
+	global.velocity = velocity
 
 	
 	
 	
 	move_and_slide(velocity)
+	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 79.2362
 
-[node name="Node2D" type="Node2D"]
+[node name="Astroid" type="Node2D"]
 
 [node name="RigidBody2D" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )

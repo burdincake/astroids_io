@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://samsungplay/LondrinaOutline-Regular.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 41
+font_data = ExtResource( 1 )
+
+[node name="HomeScreen" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 0.1091
+margin_top = 3.1091
+margin_right = 1018.11
+margin_bottom = 609.109
+color = Color( 0.117647, 0.117647, 0.117647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 405.964
+margin_top = 213.508
+margin_right = 866.964
+margin_bottom = 483.508
+custom_fonts/font = SubResource( 1 )
+text = "ASTEROIDS.IO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 372.054
+margin_top = 312.363
+margin_right = 701.054
+margin_bottom = 404.363
+__meta__ = {
+"_edit_use_anchors_": false
+}
