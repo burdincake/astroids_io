@@ -11,6 +11,9 @@ func _ready():
 	pass # Replace with function body.
 	
 func _process(delta):
+	if get_line(0) == "":
+		global.buttonPressed = false
+	
 	if global.buttonPressed == true:
 		global.playerName = get_line(0)
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -12,8 +12,10 @@ func _ready():
 
 
 func _process(delta):
-		set_text("pointer: " +str(get_local_mouse_position())+"\n"+"PlayerName: "+str(global.playerName))
-
+		var getter = "pointer: " +str(get_local_mouse_position())+"\n"+"PlayerName: "+str(global.playerName)
+		getter = getter + "\nButtonClicked: "+ str(global.buttonPressed)
+	
+		set_text(getter)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
