@@ -1,8 +1,28 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://burdincake/Screen Shot 2020-11-22 at 1.27.13 AM.png" type="Texture" id=1]
 [ext_resource path="res://burdincake/Stars.tscn" type="PackedScene" id=2]
 [ext_resource path="res://burdincake/Stars.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0745098, 0.0745098, 0.0745098, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 1, 1, 1, 1 )
+border_blend = true
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 173.748, 202.115 )
@@ -11,7 +31,7 @@ position = Vector2( 173.748, 202.115 )
 position = Vector2( 65.473, -124.994 )
 
 [node name="Sprite" type="Sprite" parent="Node2D"]
-position = Vector2( 277.419, 220.554 )
+position = Vector2( 278.551, 219.468 )
 scale = Vector2( 3.34518, 3.35212 )
 texture = ExtResource( 1 )
 
@@ -21,3 +41,17 @@ scale = Vector2( 0.999998, 0.999999 )
 script = ExtResource( 3 )
 
 [node name="Stars" parent="Node2D" instance=ExtResource( 2 )]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 223.762
+margin_top = 169.64
+margin_right = 445.762
+margin_bottom = 252.64
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 1 )
+text = "Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
