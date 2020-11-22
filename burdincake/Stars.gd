@@ -11,3 +11,5 @@ func _ready():
 	for a in starCount:
 		var newStar = Star.instance()
 		add_child(newStar)
+
+

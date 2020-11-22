@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Screen Shot 2020-11-22 at 1.27.13 AM.png-a09716f44e83003a9afabe38860ef2ab.stex"
+path="res://.import/black.png-b9f26703f9b9892d99f37e4438afcfc1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://burdincake/Screen Shot 2020-11-22 at 1.27.13 AM.png"
-dest_files=[ "res://.import/Screen Shot 2020-11-22 at 1.27.13 AM.png-a09716f44e83003a9afabe38860ef2ab.stex" ]
+source_file="res://burdincake/black.png"
+dest_files=[ "res://.import/black.png-b9f26703f9b9892d99f37e4438afcfc1.stex" ]
 
 [params]
 
