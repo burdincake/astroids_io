@@ -11,7 +11,7 @@ func _ready():
 
 func _process(delta):
 	var textedit1 = textedit.instance()
-	print(textedit.a)
+	print(textedit1._gettext())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
