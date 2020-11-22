@@ -19,10 +19,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 403.291
-margin_top = 214.399
-margin_right = 864.291
-margin_bottom = 484.399
+margin_left = 405.964
+margin_top = 213.508
+margin_right = 866.964
+margin_bottom = 483.508
 custom_fonts/font = SubResource( 1 )
 text = "ASTEROIDS.IO"
 __meta__ = {
