@@ -6,6 +6,9 @@ extends Node2D
 # var b = "text"
 var test = 3
 var velocity = Vector2()
+var playerName = ""
+var buttonPressed = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

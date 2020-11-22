@@ -10,13 +10,9 @@ extends TextEdit
 func _ready():
 	pass # Replace with function body.
 	
-func _gettext():
-	var a = get_line(0)
-	return a
-
-
-
-
+func _process(delta):
+	if global.buttonPressed == true:
+		global.playerName = get_line(0)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

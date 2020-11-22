@@ -9,10 +9,12 @@ const textedit = preload("res://burdincake/textfile.tscn")
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
-	var textedit1 = textedit.instance()
-	print(textedit1._gettext())
-
+func pressed():
+	print("hello!")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func _on_Button_pressed():
+	global.buttonPressed = true
+	
