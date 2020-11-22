@@ -1,10 +1,13 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://burdincake/Stars.gd" type="Script" id=1]
 [ext_resource path="res://burdincake/debug.gd" type="Script" id=2]
 [ext_resource path="res://burdincake/Stars.tscn" type="PackedScene" id=3]
 [ext_resource path="res://burdincake/black.png" type="Texture" id=4]
 [ext_resource path="res://samsungplay/LondrinaOutline-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://burdincake/TextEdit.gd" type="Script" id=6]
+[ext_resource path="res://burdincake/Enter.gd" type="Script" id=7]
+[ext_resource path="res://burdincake/textfile.tscn" type="PackedScene" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0745098, 0.0745098, 0.0745098, 1 )
@@ -71,6 +74,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/disabled = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 text = "Enter"
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -102,11 +106,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="black" type="Sprite" parent="."]
+position = Vector2( 212.537, 107.821 )
+scale = Vector2( 0.144376, 0.0674292 )
+texture = ExtResource( 4 )
+
+[node name="textfile" parent="." instance=ExtResource( 8 )]
+
+[node name="TextEdit" type="TextEdit" parent="textfile"]
 light_mask = -2147483648
-margin_left = 239.0
+margin_left = 238.307
 margin_top = 96.0
-margin_right = 417.0
+margin_right = 416.307
 margin_bottom = 120.0
 custom_styles/normal = SubResource( 7 )
 custom_colors/selection_color = Color( 0.486275, 0.486275, 0.486275, 1 )
@@ -114,14 +125,10 @@ custom_colors/font_color = Color( 0.756863, 0.756863, 0.756863, 1 )
 override_selected_font_color = true
 caret_blink = true
 caret_blink_speed = 0.42
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="black" type="Sprite" parent="."]
-position = Vector2( 212.537, 107.821 )
-scale = Vector2( 0.144376, 0.0674292 )
-texture = ExtResource( 4 )
 
 [node name="name" type="Label" parent="."]
 margin_left = 190.515
