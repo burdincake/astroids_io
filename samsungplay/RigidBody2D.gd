@@ -10,6 +10,7 @@ export var accel_speed = 75.0
 export var decel_speed = 0.45
 export var max_horizontal_velocity = 100.0
 export var max_vertical_velocity = 100.0
+export var angular_velocity = 0.0005
 var is_accel = false
 
 
@@ -46,8 +47,8 @@ func _physics_process(delta):
 		velocity.y = min(velocity.y,max_vertical_velocity)
 	else:
 		velocity.y = max(velocity.y,-max_vertical_velocity)
-	rotate(velocity.x * 0.0005)
-	rotate(velocity.y * 0.0005)
+	rotate(velocity.x * angular_velocity)
+	rotate(velocity.y * angular_velocity)
 
 	
 	
