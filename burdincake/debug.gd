@@ -1,18 +1,19 @@
-extends Node2D
+extends RichTextLabel
 
-var x = rand_range(-1000,1000)
-var y = rand_range(-1000,1000)
-var rad = 2
-var dist = 0
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	randomize()
 	pass # Replace with function body.
-	
+
+
+func _process(delta):
+		set_text("pointer"+str(get_local_mouse_position()))
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-func _draw():
-	draw_circle(Vector2(x,y),rad,Color(3,3,3))

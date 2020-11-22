@@ -2,7 +2,7 @@ extends Node
 
 const Star = preload("res://burdincake/star.tscn")
 
-var starCount = 1000
+export var starCount = 222
 
 
 
