@@ -1,10 +1,4 @@
 extends KinematicBody2D
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var velocity = Vector2()
 export var accel_speed = 75.0
 export var decel_speed = 0.45
@@ -57,12 +51,4 @@ func _physics_process(delta):
 	
 	global.velocity = velocity
 	global.playerPosition = self.position
-	
-	
-	
 	move_and_slide(velocity)
-	
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
