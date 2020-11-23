@@ -5,7 +5,7 @@ extends TextEdit
 # var a = 2
 # var b = "text"
 
-var scene = preload("res://samsungplay/Astroid_GUI.tscn").instance()
+var scene = preload("res://samsungplay/Astroid_GUI1.tscn").instance()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

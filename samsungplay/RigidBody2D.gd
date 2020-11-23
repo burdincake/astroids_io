@@ -6,6 +6,7 @@ export var max_horizontal_velocity = 100.0
 export var max_vertical_velocity = 100.0
 export var angular_velocity = 0.0005
 var is_accel = false
+var collision_particle = preload('res://samsungplay/astroid_particle.tscn')
 
 
 
@@ -52,3 +53,16 @@ func _physics_process(delta):
 	global.velocity = velocity
 	global.playerPosition = self.position
 	move_and_slide(velocity)
+
+
+func _on_Area2D_body_entered(body):
+	if body != self:
+		emit_particle()
+		
+func emit_particle():
+	var particleInstance = collision_particle.instance()
+	particleInstance.set('gravity',Vector2(-velocity.x,-velocity.y))
+	particleInstance.set('speed_scale',velocity.length()/5.0)
+	add_child(particleInstance)
+	yield(get_tree().create_timer(2.0),'timeout')
+	particleInstance.queue_free()

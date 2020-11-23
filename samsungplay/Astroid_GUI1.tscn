@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://samsungplay/camera.gd" type="Script" id=1]
 [ext_resource path="res://burdincake/black.png" type="Texture" id=2]
 [ext_resource path="res://samsungplay/astroid_basic.tscn" type="PackedScene" id=3]
 [ext_resource path="res://burdincake/Stars.tscn" type="PackedScene" id=4]
 [ext_resource path="res://samsungplay/gameGUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://samsungplay/asteroid.png" type="Texture" id=6]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 176.682
 
 [node name="map" type="Node2D"]
 position = Vector2( 5.66174, 5.66162 )
@@ -30,3 +34,15 @@ margin_left = -491.43
 margin_top = -291.067
 margin_right = -491.43
 margin_bottom = -291.067
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+position = Vector2( 4.15251, 2.49151 )
+scale = Vector2( 0.851202, 0.852356 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2( 4.1525, 2.49149 )
+shape = SubResource( 1 )
