@@ -1,10 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://samsungplay/astroid_basic.tscn" type="PackedScene" id=1]
 [ext_resource path="res://samsungplay/gameGUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://samsungplay/camera.gd" type="Script" id=3]
+[ext_resource path="res://samsungplay/object.png" type="Texture" id=4]
 
 [node name="map" type="Node2D"]
-
-[node name="gameGUI" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5.66174, 5.66162 )
 
 [node name="Astroid" parent="." instance=ExtResource( 1 )]
+position = Vector2( 507.721, 295.823 )
+
+[node name="Camera2D" type="Camera2D" parent="Astroid"]
+position = Vector2( 0.358276, 0.000488281 )
+current = true
+smoothing_enabled = true
+script = ExtResource( 3 )
+
+[node name="gameGUI" parent="Astroid/Camera2D" instance=ExtResource( 2 )]
+margin_left = -491.43
+margin_top = -291.067
+margin_right = -491.43
+margin_bottom = -291.067
+
+[node name="object" type="Sprite" parent="."]
+position = Vector2( 264.815, 291.564 )
+scale = Vector2( 0.365501, 1 )
+texture = ExtResource( 4 )

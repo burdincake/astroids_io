@@ -54,8 +54,9 @@ func _physics_process(delta):
 	rotate(velocity.x * angular_velocity)
 	rotate(velocity.y * angular_velocity)
 	
+	
 	global.velocity = velocity
-
+	global.playerPosition = self.position
 	
 	
 	

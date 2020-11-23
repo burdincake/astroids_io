@@ -7,6 +7,7 @@
 radius = 79.2362
 
 [node name="Astroid" type="Node2D"]
+position = Vector2( 1, 0 )
 
 [node name="RigidBody2D" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
