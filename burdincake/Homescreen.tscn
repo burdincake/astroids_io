@@ -48,7 +48,7 @@ position = Vector2( 173.748, 202.115 )
 position = Vector2( 65.473, -124.994 )
 
 [node name="Sprite" type="Sprite" parent="Node2D"]
-position = Vector2( 272.639, 225.383 )
+position = Vector2( 271.946, 224.69 )
 scale = Vector2( 3.41083, 3.35212 )
 texture = ExtResource( 4 )
 
@@ -61,9 +61,9 @@ script = ExtResource( 1 )
 starCount = 1000
 
 [node name="Button" type="Button" parent="."]
-margin_left = 255.887
+margin_left = 255.194
 margin_top = 142.411
-margin_right = 366.887
+margin_right = 366.194
 margin_bottom = 162.411
 custom_styles/hover = SubResource( 1 )
 custom_styles/normal = SubResource( 4 )
