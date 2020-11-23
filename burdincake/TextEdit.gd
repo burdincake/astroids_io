@@ -16,7 +16,7 @@ func _process(delta):
 		global.buttonPressed = false
 	
 	if global.buttonPressed == true:
-		global.playerName = get_line(0)
+
 		get_tree().get_root().add_child(scene)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
